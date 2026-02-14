@@ -6,4 +6,5 @@ Send et spørsmål ved å lage [et issue](https://github.com/digital-work/pgr102
 
 ## eksempler
 
+* [Samspill mellom HTML, CSS og JavaScript](https://digital-work.github.io/pgr102/01-html-css-js-demo.html)
 * [Hello world!](https://digital-work.github.io/pgr102/hello_world.html)
