@@ -11,27 +11,62 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 90vh;
             margin: 0;
 			flex-direction: column;
-			padding-top: 95px;
+			padding-top: 25px;
         }
+		
 		
 		.topbar {
 		    position: fixed;
 		    top: 0;
 		    left: 0;
 		    width: 100%;
-		    background-color: #2E4A3F; /* furugrønn */
-		    color: white;
-		    padding: 10px;
-			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
 		    display: flex;
-		    justify-content: center;
 		    align-items: center;
-		    gap: 20px;   /* jevn spacing */
 		    font-size: 14px;
+
+		    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+		}
+
+		.topbar-left {
+		    flex: 1;
+		    background-color: #2E4A3F;
+		    color: white;
+		    padding: 10px;
+
+		    display: flex;
+		    align-items: center;
+		    justify-content: flex-end;   /* ← behold denne */
+		    gap: 14px;
+		}
+
+		.topbar-left label:last-child {
+		    margin-right: 18px;
+		    position: relative;
+		}
+		
+		.topbar-left label:last-child::after {
+		    content: "";
+		    position: absolute;
+		    right: -12px;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    width: 1px;
+		    height: 18px;
+		    background-color: rgba(255,255,255,0.35);
+		}
+		
+		.topbar-right {
+			flex: 1;
+		    background-color: #4C7A6A;  /* HOT PINK 💥 */
+		    color: white;
+		    padding: 10px 20px;
+		    display: flex;
+		    align-items: center;
+			justify-content: flex-start;
 		}
 		
 		.topbar label {
@@ -39,6 +74,21 @@
 		    align-items: center;
 		    gap: 5px;
 		    cursor: pointer;
+		}
+		
+		.topbar h1 {
+			display: none;
+		}
+		
+		.forklaring-control {
+		    margin-left: 10px;
+		    padding-left: 15px;
+		    padding-right: 20px;
+		    background-color: #f8c0d8;  /* soft pink */
+		    height: 100%;
+		    display: flex;
+		    align-items: center;
+		    border-radius: 8px;
 		}
 
 		#forklaring {
@@ -56,7 +106,7 @@
 		}
 
 
-		#forklaringTittel {
+		#forklaringsTekst {
 		    font-weight: bold;
 		    margin-bottom: 3px;
 		}
@@ -68,6 +118,10 @@
 		#forklaringEffekt {
 		    color: #666;
 		    font-size: 12px;
+		}
+		
+		#forklaring h2 {
+			display: none;			
 		}
 
         .container {
@@ -85,7 +139,7 @@
 		    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 		}
 		
-		.container h2 {
+		.container h1 {
 		    margin-top: 0;
 		    margin-bottom: 20px;
 		}
@@ -121,59 +175,74 @@
 <body>
 
 <div class="topbar">
-	<label>
-       <input type="checkbox" checked disabled> HTML
-	</label>
-
-    <label style="margin-left:15px;">
-	   <input type="checkbox" id="cssToggle" checked onchange="toggleCSS(); oppdaterForklaring()"> CSS
-    </label>
-
-	<label style="margin-left:15px;">
-	   <input type="checkbox" id="jsToggle" checked onchange="oppdaterForklaring()"> JavaScript
-	</label>
 	
-	<label>
-	    <input type="checkbox" id="forklaringToggle" checked onchange="toggleForklaring()">
-	    Vis forklaring
-	</label>
+	<H1>Teknologivalg</H1>
+	
+	<div class="topbar-left">
+
+	    <label>
+	        <input type="checkbox" checked disabled> HTML
+	    </label>
+
+	    <label>
+	        <input type="checkbox" id="cssToggle" unchecked onchange="toggleCSS(); oppdaterForklaring()"> CSS
+	    </label>
+
+	    <label>
+	        <input type="checkbox" id="jsToggle" unchecked onchange="oppdaterForklaring()"> JavaScript
+	    </label>
+		
+	</div>
+
+	<div class="topbar-right">
+	    <label>
+	        <input type="checkbox" id="forklaringToggle" checked onchange="toggleForklaring()">
+	        Vis forklaring
+	    </label>
+	</div>
+
 </div>
 
 <div id="forklaring">
-    <div id="forklaringTittel"></div>
-    <div id="forklaringStatus"></div>
-    <div id="forklaringEffekt"></div>
-</div>
+	
+	<H2>Forklaring</H2>
+	
+	<p id="forklaringsTekst">Denne siden demonstrerer samspillet mellom HTML, CSS og JavaScript.</p>
+	<p id="forklaringStatus"></p>
+	<p id="forklaringEffekt"></p>
 
+</div>
 	
 <div class="container" id="welcomeBox">
 
-    <h2 id="welcomeHeader">Hva er navnet ditt?</h2>
+    <h1 id="welcomeHeader">Hva er navnet ditt?</h1>
 	
-		<div id="welcomeContent">
-	
-	    <input type="text" id="navnInput" placeholder="Skriv navnet ditt her">
-	
-	    <br>
-	
-	    <button onclick="siHei()">Send</button>
-	
-	</div>
+	    <div id="welcomeContent">
+			
+			<input type="text" id="navnInput" placeholder="Skriv navnet ditt her">
+			
+			<br>
+			
+			<button onclick="siHei()">Send</button>
+		
+		</div>
 
 </div>
 
 <script>
 	
-document.addEventListener("DOMContentLoaded", () => {
+	document.addEventListener("DOMContentLoaded", () => {
+		
 	    oppdaterForklaring();
 
 	    let topbar = document.querySelector(".topbar");
 	    let forklaring = document.getElementById("forklaring");
 
 	    forklaring.style.top = topbar.offsetHeight + "px";
-		
-		toggleForklaring();
-	
+
+	    toggleForklaring();
+
+		toggleCSS();
 	});
 	
 function siHei() {
@@ -196,6 +265,7 @@ function siHei() {
 }
 
 function toggleCSS() {
+	
     let style = document.getElementById("mainStyle");
     let checkbox = document.getElementById("cssToggle");
 
@@ -210,9 +280,6 @@ function oppdaterForklaring() {
 
     let css = document.getElementById("cssToggle").checked;
     let js  = document.getElementById("jsToggle").checked;
-
-    document.getElementById("forklaringTittel").textContent =
-        "Denne siden demonstrerer samspillet mellom HTML, CSS og JavaScript.";
 
     if (css && js) {
         document.getElementById("forklaringStatus").textContent =
@@ -245,6 +312,7 @@ function oppdaterForklaring() {
 }
 
 function toggleForklaring() {
+	
     let visible = document.getElementById("forklaringToggle").checked;
     let forklaring = document.getElementById("forklaring");
 
