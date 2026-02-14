@@ -1,11 +1,9 @@
-# pgr102 [Update repository name.]
+# pgr102
 
-[This README file has been created automatically. Please update this text accordingly.]
+Dette er en side brukt for navigering.
 
-## Oversikt
+Send et spørsmål ved å lage [et issue](https://github.com/digital-work/pgr102/issues). OBS: Alle issues er offentlige.
 
-* admin/
-* [GLOSSARY.md](GLOSSARY.md)
-* [README.md](README.md)
+## eksempler
 
-[This overview has been generated automatically.]
+* [Hello world!](https://digital-work.github.io/pgr102/hello_world.html)
