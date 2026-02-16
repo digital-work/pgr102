@@ -3,19 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World in JavaScript</title>
+    <title>Eksempler</title>
+	
+	<style>
+	   .example {
+	      display: none;
+	      /*margin-top: 20px;*/
+	   }
+	</style>
+	
+	<script>
+	
+	function visEksempel(nr) {
+		let eksempler = document.querySelectorAll('.example');
+		eksempler.forEach(e => e.style.display = 'none');
+
+		document.getElementById('example' + nr).style.display = 'block';
+		
+		// also check correct radio
+		const radio = document.querySelector(`input[name="valg"][value="${nr}"]`);
+		if (radio) radio.checked = true;
+	}
+	
+	// Run on page load
+	document.addEventListener("DOMContentLoaded", () => {
+	    const params = new URLSearchParams(window.location.search);
+	    const exampleNr = params.get("example");
+
+	    if (exampleNr) {
+	        visEksempel(exampleNr);
+	    } else {
+	        visEksempel(1); // default example
+	    }
+	});
+	
+	</script>
+	
 </head>
+
 <body>
-    <H1>Første eksemplet</H1>
-    <button onclick="alert('Hei Kristiania')">
+	
+	<h1>Velg eksempel</h1>
+	
+	<label><input type="radio" name="valg" value="1" onclick="visEksempel(1)"> 1</label>
+	<label><input type="radio" name="valg" value="2" onclick="visEksempel(2)"> 2</label>
+	<label><input type="radio" name="valg" value="3" onclick="visEksempel(3)"> 3</label>
+	<label><input type="radio" name="valg" value="4" onclick="visEksempel(4)"> 4</label>
+	<label><input type="radio" name="valg" value="5" onclick="visEksempel(5)"> 5</label>
+	<label><input type="radio" name="valg" value="6" onclick="visEksempel(6)"> 6</label>
+	
+	<div id="example1" class="example">
+	
+    <H1>Eksempel 2</H1>
+	
+	<pre id="kode1">	
+&lt;button onclick=&quot;alert('Hallo Kristiania!')&quot;&gt;
+	Klikk her
+&lt;/button&gt;
+	</pre>
+	
+	<button onclick="alert('Hei Kristiania')">
+		Klikk her
+    </button>
+	
+	</div>
+	
+	<div id="example2" class="example">
+	
+    <H1>Eksempel 2</H1>
+	
+	<pre id="kode2">	
+&lt;script&gt;let navn = "Oslo";&lt;/script&gt;
+
+&lt;button onclick="alert('Hei ' + navn)"&gt;
+   Klikk her
+&lt;/button&gt;
+	</pre>
+	
+    <script>let navn1 = "Oslo";</script>
+	
+    <button onclick="alert('Hei ' + navn1)">
         Klikk her
     </button>
+	
+	</div>
+	
+	<div id="example3" class="example">
+	
+	<H1>Eksempel 3</H1>
+	
+	<pre id="kode3">
+&lt;script&gt;
+let navn = &quot;Oslo&quot;;
+navn = &quot;Begen&quot;;
+&lt;/script&gt;
 
-    <H1>Andre eksemplet</H1>
-    <script>let navn = "Oslo";</script>
-    <button onclick="alert('Hei ' + navn)">
-        Klikk her
-    </button>
+&lt;button onclick=&quot;alert('Hei ' + navn)&quot;&gt;
+   Klikk her
+&lt;/button&gt;
 
+&lt;button onclick=&quot;alert('Hei ' + navn)&quot;&gt;
+   Klikk her igjen
+&lt;/button&gt;
+	</pre>
+	
+	<script>
+		let navn2 = "Oslo";
+		navn2 = "Bergen";
+	</script>
+	
+	<button onclick="alert('Hei ' + navn2)">
+		Klikk her
+	</button>
+	
+	<button onclick="alert('Hei ' + navn2)">
+	   Klikk her igjen
+	</button>
+
+	</div>
+
+	<div id="example4" class="example">
+	
+	<H1>Eksempel 4</H1>
+	
+	<pre id="kode4">
+&lt;script&gt;
+let navn = &quot;Oslo&quot;;
+
+function siHei() {
+    alert(&quot;Hei &quot; + navn);
+}
+&lt;/script&gt;
+
+&lt;button onclick=&quot;siHei()&quot;&gt;
+   Klikk her
+&lt;/button&gt;	
+	</pre>
+	
+	<script>
+		let navn3 = "Oslo";
+		
+		function siHei() {
+			alert("Hei " + navn3);
+		}
+	</script>
+
+	<button onclick="siHei()">
+	   Klikk her
+	</button>
+		
+	</div>
+	
+	<div id="example5" class="example">
+	
+	<H1>Eksempel 5</H1>
+	
+	<pre id="kode5">
+&lt;script&gt;
+function siHei() {
+    let navn = document.getElementById("navnInput").value;
+
+    alert("Hallo " + navn + "! Jeg ønsker deg en fin dag!");
+}
+&lt;/script&gt;
+
+&lt;input type="text" id="navnInput"&gt;
+&lt;button onclick="siHei()"&gt;Send&lt;/button&gt;
+	</pre>
+	
+	<script>
+		function siHei_eks5() {
+		    let navn_eks5 = document.getElementById("navnInput_eks5").value;
+
+		    alert("Hallo " + navn_eks5 + "! Jeg ønsker deg en fin dag!")
+		}
+		</script>
+
+	</script>
+	
+	<input type="text" id="navnInput_eks5">
+	<button onclick="siHei_eks5()">Send</button>
+		
+	</div>
+	
+	<div id="example6" class="example">
+		
+	<H1>Eksempel 6</H1>
+		
+	<pre id="kode6">
+&lt;script&gt;
+function siHei() {
+    let navn = document.getElementById("navnInput").value;
+
+    if (navn === "") {
+        alert("Du må skrive inn et navn.");
+    } else {
+        alert("Hallo " + navn + "! Jeg ønsker deg en fin dag!");
+    }
+}
+&lt;/script&gt;
+
+&lt;input type="text" id="navnInput"&gt;
+&lt;button onclick="siHei()"&gt;Send&lt;/button&gt;
+	</pre>
+	
+	<script>
+	function siHei_eks6() {
+	    let navn_eks6 = document.getElementById("navnInput_eks6").value;
+		
+		if (navn_eks6 === "") {
+	        alert ("Du må skrive inn et navn.");
+	    } else {
+			alert("Hallo " + navn_eks6 + "! Jeg ønsker deg en fin dag!");
+	    }
+	}
+	</script>
+
+	<input type="text" id="navnInput_eks6">
+	<button onclick="siHei_eks6()">Send</button>
+			
+	</div>
+	
 </body>
 </html>
