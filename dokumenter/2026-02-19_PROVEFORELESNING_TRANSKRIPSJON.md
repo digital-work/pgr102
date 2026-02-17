@@ -212,6 +212,8 @@ En samling instruksjoner:
 Her viser den en melding.  
 Når vi kaller funksjonen, kjøres koden inni den.  
 Det gjør koden mer strukturert, oversiktlig og lettere å lese.  
+I praksis brukes funksjoner for å dele opp større systemer  
+slik at flere utviklere kan jobbe på samme kodebase.  
 
 Så langt har verdien vi brukte vært statisk.  
 I ekte programmer får vi ofte input fra brukeren.  
@@ -270,16 +272,21 @@ function siHei() {
 
 [Nå introduserer vi en betingelse.  
 
-if betyr: sjekk om det som står () er sant.  
-Der sjekker vi om variabelen navn er tom.  
-=== tester om to verdier er like,  
-og "" betyr en tom tekst.  
+En if-setning betyr:  
+Hvis betingelsen i parentesene er sann,  
+kjører vi koden i blokken under.  
 
-Hvis betingelsen er sann, vises koden som står i blokken rett under if, altså en feilmelding.  
-Hvis ikke, hopper programmet videre, 
-eller det kjører blokken som står etter else-delen, altså å vise hilsenen.  
+Her sjekker vi om variabelen navn er tom.  
+=== betyr at vi tester om to verdier er like.  
+"" representerer en tom tekst.  
 
-Slik kan programmet ta et valg.]
+Er betingelsen sann,  
+kjøres koden i if-blokken, altså feilmeldingen.  
+Er den ikke sann,  
+kjøres koden i else-blokken, altså hilsenen.
+
+Dette gjør at programmet kan ta et valg  
+basert på situasjonen.]
 
 ## 15. Betingelse (if)
 
@@ -319,9 +326,12 @@ men prinsippene gjelder generelt.]
 * Flere typer betingelser  
 * Løkker og gjentakelse
 
-[I dette kurset bygger vi videre på disse begrepene.  
+[I  dette kurset bygger vi videre på disse begrepene.  
 Vi skal lage større programmer, håndtere mer kompleks input,  
-og lære hvordan vi kan skrive mer strukturert og oversiktlig kode.]
+og lære å skrive kode som andre kan lese, forstå og videreutvikle.  
+
+I arbeidslivet jobber man sjelden alene.  
+Koden skal fungere – men den skal også være forståelig for andre i teamet.]]
 
 ## 18. Takk for oppmerksomheten!
 
