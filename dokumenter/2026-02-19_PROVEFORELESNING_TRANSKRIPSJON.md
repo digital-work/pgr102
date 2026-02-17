@@ -2,13 +2,13 @@
 
 # Slides
 
-## 1. Hei,
+## 1. Hallo!
 
 Navnet mitt er Joschua Thomas Simon-Liedtke.  
-Utvikler og forsker innen IKT.
+Jeg er utvikler og forsker innen IKT.
 
 [Jeg har jobbet med programmering siden bachelorstudiene mine.  
-De siste årene har jeg også forsket innen universell utforming av IKT.]
+De siste årene har jeg forsket på universell utforming av IKT.]
 
 ## 2. Introduksjon til programmering
 
@@ -18,70 +18,61 @@ Målet for i dag:
 * Forstå hva programmering innebærer.  
 * Forstå hva variabler og funksjoner er.
 
-Du finner eksemplene på:  
-https://github.com/digital-work/pgr102  
+Du finner eksemplene på: https://github.com/digital-work/pgr102  
 
-[Vi bruker JavaScript som et eksempel.  
-I løpet av forelesningen skal dere se hvordan dette kan brukes i praksis for å lage et lite program.]
+[Vi bruker JavaScript som eksempel.  
+Vi skal gå fra en enkel melding til et lite program.]
 
 ## 3. Hva er et program?
 
 Et program er et sett med instruksjoner som forteller en datamaskin hvordan den løser en oppgave steg for steg.
-
 * Bearbeide tekst  
 * Bearbeide bilder  
-* Interagere med brukeren  
+* Samhandle med brukeren  
 
-[Vi bruker programmer til å løse problemer eller utføre oppgaver.  
-Det kan være å lese og bearbeide tekst.  
-Det kan være å tolke bilder.  
-Det kan være å interagere med en bruker.  
-Det kan være å utføre beregninger.  
-I denne forelesningen skal vi fokusere på oppgaver som er relevante for webutvikling og næringsliv.  
-Altså ekte nettsteder og digitale løsninger.  
-Vi skal også gjøre noen matematiske beregninger der det er relevant.]
+[Programmer brukes til å løse problemer eller utføre konkrete oppgaver.  
+Det kan være oppgaver relatert til tekst, bilder, brukerinteraksjon eller beregninger.  
+I dag fokuserer vi på oppgaver som er relevante for webutvikling.]
 
 ## 4. Hva er programmering?
 
 * Å skrive presise instruksjoner til en datamaskin  
 * Slik at den kan utføre oppgaver og løse problemer  
 
-[… og samhandle med mennesker.  
-
-En datamaskin tenker ikke selv.  
-Den gjør nøyaktig det vi skriver.  
+[En datamaskin tenker ikke selv.  
+En datamaskin gjør nøyaktig det vi skriver.  
 Ikke det vi mener.  
-Derfor må vi være presise når vi programmerer.  
-Disse presise instruksjonene skriver vi i et programmeringsspråk.]
+Derfor må vi være presise.  
+Men en datamaskin forstår ikke norsk eller engelsk.]
 
 ## 5. Hvordan forstår datamaskinen instruksjonene?
 
-Datamaskinen forstår bare maskinspråk.  
-Vi skriver kode i et programmeringsspråk.  
-Programmeringsspråk oversettes til maskinspråk før det utføres.
+Datamaskinen forstår bare maskinspråk  
+Vi skriver kode i et programmeringsspråk  
+Programmeringsspråk oversettes til maskinspråk før programmet utføres
 
-[En datamaskin forstår ikke norsk eller engelsk.  
-Den forstår maskinspråk.  
-Enkelt sagt består maskinspråk av nuller og ettall.  
-Slik dere kanskje har sett i filmer.  
-Men det er vanskelig for mennesker å lese og skrive.  
+[Maskinspråk består av nuller og ettall.  
+Det er vanskelig for mennesker å lese.  
 Derfor bruker vi programmeringsspråk.  
-Disse oversettes til maskinspråk før programmet kjøres.]
+Programmeringsspråk oversettes til maskinspråk før programmet kjøres.]
 
 ## 6. JavaScript
 
 Et programmeringsspråk som kan brukes i en nettleser.  
 Det brukes ofte sammen med HTML og CSS.
 
-[I denne forelesningen bruker vi JavaScript som et konkret eksempel på et programmeringsspråk.  
-JavaScript er mye brukt i webutvikling og i næringslivet.  
-På en nettside brukes HTML for struktur.  
-CSS brukes for design.  
-JavaScript brukes for å styre hva som skjer når brukeren gjør noe.]
+[Eksempel](https://digital-work.github.io/pgr102/01-html-css-js-demo.html)
+
+[JavaScript er et programmeringsspråk som er mye brukt i webutvikling og i næringslivet.  
+I nettleseren brukes HTML for struktur.  
+CSS for design.  
+JavaScript for logikk og interaksjon.]
 
 ## 7. Eksempel 1
 
 Statisk melding  
+
+[Eksempel 1](https://digital-work.github.io/pgr102/02_eksempler_grunnleggende-begreper.html?example=1)
 
 ```
 <button onclick="alert('Hallo Kristiania!')">
@@ -89,20 +80,22 @@ Statisk melding
 </button>
 ```
 
-[Her ser dere et veldig enkelt program skrevet i JavaScript.  
-Det er integrert i en nettside.  
-onclick forteller hva som skal skje når vi klikker.  
-alert er selve handlingen som kjøres når vi klikker på knappen.  
-Teksten i anførselstegn er verdien av meldingen som vises av alert.]
+[Her ser dere et enkelt program skrevet i JavaScript,  
+integrert i en nettside.  
+onclick bestemmer hva som skjer når vi klikker.  
+alert viser en melding på skjermen.  
+Teksten i anførselstegn er verdien som vises i meldingen.  
 
-[I dette eksempelet har vi skrevet teksten direkte i koden.  
-Men hva hvis vi vil bruke et annet navn?  
-Hva hvis navnet brukes flere steder i programmet?  
-Må vi da lete gjennom hele koden og endre teksten overalt?]
+Her har vi skrevet teksten direkte i koden.  
+Hvis vi vil bruke et navn flere steder eller endre det,  
+må vi gå gjennom koden for å endre overalt.  
+Det er upraktisk.]
 
 ## 8. Eksempel 2
 
 Bruk av variabel  
+
+[Eksempel 1](https://digital-work.github.io/pgr102/02_eksempler_grunnleggende-begreper.html?example=2)
 
 ```
 <script>
@@ -114,22 +107,20 @@ let navn = "Oslo";
 </button>
 ```
 
-[I stedet for å skrive teksten direkte i koden kan vi lagre den ett sted.  
-Det vi lager kalles en variabel.  
-Den kan gjenbrukes flere steder i programmet.  
-Her har vi laget en variabel.  
-Vi skriver let navn = "Oslo";  
+[Vi kan lagre teksten i en variabel –  
+et navn på en verdi som kan brukes flere steder.  
 
-let betyr at vi oppretter en variabel.  
-navn er navnet vi gir den.  
-= betyr at vi gir variabelen en verdi.  
-"Oslo" er selve verdien som lagres.  
+Her skriver vi: let navn = "Oslo";  
+let oppretter variabelen,  
+navn er navnet,  
+= tildeler verdien,  
+og "Oslo" er selve verdien.  
 
-I stedet for å skrive teksten direkte i meldingen bruker vi variabelen navn.  
-Da kan vi endre verdien ett sted.  
-Den brukes automatisk der vi trenger den.  
+Når vi bruker variabelen i meldingen,  
+kan vi endre verdien ett sted,  
+og den oppdateres automatisk gjennom hele programmet.  
 
-JavaScript-kode må ligge inne i en <script>-blokk.]
+JavaScript-kode må ligge i en <script>-blokk.]
 
 ## 9. Variabel
 
@@ -137,10 +128,15 @@ Et navn på en lagret verdi
 * Verdien kan brukes flere steder  
 * Verdien kan endres  
 
-[Fordelen med variabler er at verdien kan gjenbrukes flere steder i koden.  
-En variabel gjør det også enklere å endre verdien.]
+[Variabler gjør koden enklere å vedlikeholde.  
+Det er enklere å endre verdien.  
+Verdien kan gjenbrukes.  ]
 
 ## 10. Eksempel 3
+
+Variabler kan endres og gjenbrukes
+
+[Eksempel 3](https://digital-work.github.io/pgr102/02_eksempler_grunnleggende-begreper.html?example=3)
 
 ```
 <script>
@@ -157,30 +153,28 @@ navn = "Bergen";
 </button>
 ```
 
-[Først setter vi variabelen navn til "Oslo".  
-Så endrer vi verdien til "Bergen".  
-Vi endrer ikke selve koden i knappen.  
-Knappen gjør fortsatt det samme.  
-Det eneste vi endrer er verdien som ligger i variabelen.  
-Derfor får vi et annet resultat selv om knappen ser lik ut.  
+[Her endrer vi bare verdien i variabelen.  
+Koden i knappen er uendret, men resultatet blir annerledes.  
 
-Når vi klikker på knappen får vi "Hei Bergen".  
-Det er fordi Bergen er den siste verdien vi har gitt til variabelen.  
-Dette viser at en variabel kan endre verdi underveis i programmet.]
+Først setter vi navn til "Oslo",  
+så endrer vi det til "Bergen".  
+Når vi klikker, får vi "Hei Bergen"  
+fordi den siste verdien brukes.  
 
-[Så langt har vi skrevet selve koden direkte i knappen.  
-Det fungerer i små eksempler som dette.  
-Men i ekte programmer er det ofte mer komplekst.  
-Da har vi flere instruksjoner.  
-Vi har også flere elementer på nettsiden.  
-For eksempel flere knapper som skal gjøre det samme.  
-Slik det er nå måtte vi skrevet koden i hver enkelt knapp.  
+Dette viser at en variabel kan endres underveis i programmet.
+Vi ser også at samme variabel kan brukes på to ulike knapper.]
 
-Da kan det fort bli rotete å ha alle instruksjoner direkte i HTML.]
+[Så langt har vi skrevet koden direkte i knappen.  
+Det fungerer i små eksempler,  
+men i større programmer med flere elementer  
+blir det fort rotete.  
+Da trenger vi en bedre struktur.]
 
 ## 11. Eksempel 4
 
 Bruk av funksjoner  
+
+[Eksempel 4](https://digital-work.github.io/pgr102/02_eksempler_grunnleggende-begreper.html?example=4)
 
 ```
 <script>
@@ -196,53 +190,44 @@ function siHei() {
 </button>
 ```
 
-[Nå har vi samlet instruksjonen i en egen blokk.  
-Instruksjonen er samlet i noe som kalles en funksjon.  
-siHei er navnet på funksjonen.  
+[Nå har vi samlet instruksjonen i en funksjon.  
+function betyr at vi oppretter en funksjon,  
+og siHei er navnet.  
 
-Ordet function betyr at vi lager en funksjon.  
-siHei er navnet vi gir den.  
+() kan ta imot input,  
+men her er de tomme fordi vi ikke har noen input.  
+{} markerer koden som hører til funksjonen.  
 
-() betyr at vi kan sende inn informasjon.  
-Det vil si verdier som input.  
-I dette eksempelet sender vi ikke inn noe informasjon.  
-Derfor er parentesene tomme.  
-
-Klammeparentesene {} markerer starten og slutten på koden som tilhører funksjonen.  
-
-I knappen har vi bare én instruksjon.  
-Den sier: kjør funksjonen siHei().  
-Når vi skriver siHei() i knappen betyr det at funksjonen kjøres.  
-Den gjør akkurat det samme som instruksjonen gjorde da den var skrevet direkte i knappen.]
+I knappen skriver vi bare siHei().  
+Da kjøres funksjonen,  
+og gjør det samme som koden gjorde tidligere.]
 
 ## 12. Funksjon
 
 En samling instruksjoner:  
-* Utfører én bestemt oppgave  
-* Kan kalles flere ganger når vi trenger den  
+* utfører én bestemt oppgave  
+* kan kalles flere ganger  
 
-[En funksjon er en samling instruksjoner som utfører en bestemt oppgave.  
-I vårt eksempel er oppgaven å vise en melding.  
-Når vi kaller funksjonen kjøres instruksjonene inni den.  
-Dette gjør koden mer strukturert.  
-Det gjør den også lettere å lese.  
+[En funksjon er en samling instruksjoner som utfører en oppgave.  
+Her viser den en melding.  
+Når vi kaller funksjonen, kjøres koden inni den.  
+Det gjør koden mer strukturert, oversiktlig og lettere å lese.  
 
-Selv om vi har brukt variabler og funksjoner har vi skrevet verdien statisk i koden.  
-I ekte programmer har vi ofte brukerinput.  
-For eksempel fra et input-felt.  
+Så langt har verdien vi brukte vært statisk.  
+I ekte programmer får vi ofte input fra brukeren.  
 
-Da kan vi bruke JavaScript til å hente verdien brukeren har skrevet.  
-Deretter kan vi bearbeide den.]
+Da kan vi bruke JavaScript for å hente og bearbeide verdien.]
 
 ## 13. Eksempel 5
 
 Input  
 
+[Eksempel 5](https://digital-work.github.io/pgr102/02_eksempler_grunnleggende-begreper.html?example=5)
+
 ```
 <script>
 function siHei() {
     let navn = document.getElementById("navnInput").value;
-
     alert("Hallo " + navn + "! Jeg ønsker deg en fin dag!");
 }
 </script>
@@ -251,27 +236,20 @@ function siHei() {
 <button onclick="siHei()">Send</button>
 ```
 
-[I dette eksempelet legger vi et tekstfelt ved siden av knappen.  
-Tekstfeltet har id navnInput.  
+[I dette eksempelet legger vi til et tekstfelt med id navnInput.  
+Når vi trykker på knappen, kjøres fortsatt funksjonen siHei,  
+men nå henter den verdien fra input-feltet  
+og bruker teksten brukeren har skrevet i meldingen.  
 
-Når vi trykker på knappen kjøres fortsatt funksjonen siHei.  
-Men instruksjonen i funksjonen er litt annerledes.  
-
-Den første linjen i funksjonen henter verdien fra input-feltet.  
-Programmet finner elementet som har id navnInput.  
-Deretter henter det verdien fra elementet.  
-Altså teksten brukeren har skrevet.  
-Så bruker vi verdien i meldingen som vises.  
-
-Så langt har programmet alltid gjort det samme.  
-Det tar et navn og viser en hilsen.  
-
-Men hva hvis brukeren ikke skriver inn noe navn?  
-Da vil vi kanskje at programmet skal reagere annerledes.]
+Så langt viser programmet bare en hilsen basert på navnet.  
+Men hva skjer hvis feltet er tomt?
+Da vil vi at programmet skal reagere annerledes.]
 
 ## 14. Eksempel 6
 
 Bruk av betingelser (if)  
+
+[Eksempel 6](https://digital-work.github.io/pgr102/02_eksempler_grunnleggende-begreper.html?example=6)
 
 ```
 <script>
@@ -292,23 +270,16 @@ function siHei() {
 
 [Nå introduserer vi en betingelse.  
 
-if betyr: hvis noe er sant, gjør dette.  
-I parentesene etter if skriver vi en betingelse.  
-Her sjekker vi om variabelen navn er tom.  
+if betyr: sjekk om det som står () er sant.  
+Der sjekker vi om variabelen navn er tom.  
+=== tester om to verdier er like,  
+og "" betyr en tom tekst.  
 
-=== brukes for å sjekke om to verdier er like.  
-"" betyr en tom tekst.  
-Det vil si at brukeren ikke har skrevet noe.  
+Hvis betingelsen er sann, vises koden som står i blokken rett under if, altså en feilmelding.  
+Hvis ikke, hopper programmet videre, 
+eller det kjører blokken som står etter else-delen, altså å vise hilsenen.  
 
-Hvis betingelsen er sann kjøres koden i blokken under.  
-Hvis ikke hopper programmet videre.  
-Eller det kjører else-delen hvis den finnes.  
-
-I vårt eksempel sjekker vi om variabelen er tom.  
-Hvis feltet er tomt viser vi en feilmelding.  
-Hvis ikke viser vi hilsenen.  
-
-Dette gjør at programmet kan ta et valg.]
+Slik kan programmet ta et valg.]
 
 ## 15. Betingelse (if)
 
@@ -316,50 +287,45 @@ Lar programmet ta valg
 * Utfører ulik kode avhengig av en betingelse  
 
 [Med if kan programmet reagere forskjellig avhengig av situasjonen.  
-Uttrykket i parentesene må være sant for at koden skal kjøres.]
+Koden kjøres bare når betingelsen i parentesene er sann.]
 
 ## 16. Oppsummering
 
-Hva vi har forstått:  
+Hva vi har forstått:
 * Hva et program er  
 * Hva programmering innebærer  
 
-Hva vi har brukt:  
+Hva vi har brukt:
 * Variabler – lagre og gjenbruke verdier  
 * Funksjoner – samle og strukturere kode  
 * Betingelser – la programmet ta valg  
 
-[I dag har vi først sett på hva et program er.  
-Vi har også sett hva programmering innebærer.  
-Det vil si å skrive presise instruksjoner som setter datamaskinen i stand til å utføre oppgaver.  
+[I dag har vi sett hva et program er,  
+og hva programmering innebærer – å skrive presise instruksjoner.  
 
-Så har vi brukt noen av de mest grunnleggende byggesteinene i et program.  
-Variabler.  
-Funksjoner.  
-Betingelser.  
+Vi har brukt tre grunnleggende byggesteiner:  
+variabler, funksjoner og betingelser.  
 
-Vi har gått fra en enkel melding.  
-Til et lite program som kan ta imot input og reagere forskjellig avhengig av situasjonen.  
+Vi har gått fra en enkel melding  
+til et program som tar imot input og tar valg.  
 
-Vi har brukt JavaScript som eksempel.  
-Men prinsippene gjelder for programmering generelt.]
+Vi brukte JavaScript som eksempel,  
+men prinsippene gjelder generelt.]
 
 ## 17. Hva skjer videre?
 
-* Mer om variabler og datatyper  
-* Parametere og returverdier i funksjoner  
+* Variabler og datatyper  
+* Parametere og returverdier  
 * Flere typer betingelser  
-* Løkker og gjentakelse  
+* Løkker og gjentakelse
 
-[I dette kurset vil vi bygge videre på disse grunnleggende begrepene.  
-
-Vi skal se nærmere på hvordan vi kan strukturere større programmer.  
-Vi skal håndtere mer kompleks input.  
-Og vi skal skrive mer robust kode.]
+[I dette kurset bygger vi videre på disse begrepene.  
+Vi skal lage større programmer, håndtere mer kompleks input,  
+og lære hvordan vi kan skrive mer strukturert og oversiktlig kode.]
 
 ## 18. Takk for oppmerksomheten!
 
-Kom med spørsmål eller send e-post til xxx@gmail.com.
+Kom med spørsmål eller send e-post til drjthsl@gmail.com.
 
 # Referanser
 
