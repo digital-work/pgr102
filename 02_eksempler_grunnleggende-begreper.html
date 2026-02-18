@@ -62,7 +62,7 @@
 &lt;/button&gt;
 	</pre>
 	
-	<button onclick="alert('Hei Kristiania')">
+	<button onclick="alert('Hallo Kristiania')">
 		Klikk her
     </button>
 	
@@ -73,16 +73,18 @@
     <H1>Eksempel 2</H1>
 	
 	<pre id="kode2">	
-&lt;script&gt;let navn = "Oslo";&lt;/script&gt;
+&lt;script&gt;
+let by = "Oslo";
+&lt;/script&gt;
 
-&lt;button onclick="alert('Hei ' + navn)"&gt;
+&lt;button onclick="alert('Hei ' + by)"&gt;
    Klikk her
 &lt;/button&gt;
 	</pre>
 	
-    <script>let navn1 = "Oslo";</script>
+    <script>let by2 = "Oslo";</script>
 	
-    <button onclick="alert('Hei ' + navn1)">
+    <button onclick="alert('Hei ' + by2)">
         Klikk her
     </button>
 	
@@ -94,30 +96,22 @@
 	
 	<pre id="kode3">
 &lt;script&gt;
-let navn = &quot;Oslo&quot;;
-navn = &quot;Bergen&quot;;
+let by = &quot;Oslo&quot;;
+by = &quot;Bergen&quot;;
 &lt;/script&gt;
 
-&lt;button onclick=&quot;alert('Hei ' + navn)&quot;&gt;
+&lt;button onclick=&quot;alert('Hei ' + by)&quot;&gt;
    Klikk her
-&lt;/button&gt;
-
-&lt;button onclick=&quot;alert('Hei ' + navn)&quot;&gt;
-   Klikk her igjen
 &lt;/button&gt;
 	</pre>
 	
 	<script>
-		let navn2 = "Oslo";
-		navn2 = "Bergen";
+		let by3 = "Oslo";
+		by3 = "Bergen";
 	</script>
 	
-	<button onclick="alert('Hei ' + navn2)">
+	<button onclick="alert('Hei ' + by3)">
 		Klikk her
-	</button>
-	
-	<button onclick="alert('Hei ' + navn2)">
-	   Klikk her igjen
 	</button>
 
 	</div>
@@ -128,10 +122,10 @@ navn = &quot;Bergen&quot;;
 	
 	<pre id="kode4">
 &lt;script&gt;
-let navn = &quot;Oslo&quot;;
+let by = &quot;Oslo&quot;;
 
 function siHei() {
-    alert(&quot;Hei &quot; + navn);
+    alert(&quot;Hei &quot; + by);
 }
 &lt;/script&gt;
 
@@ -141,10 +135,10 @@ function siHei() {
 	</pre>
 	
 	<script>
-		let navn3 = "Oslo";
+		let by4 = "Oslo";
 		
 		function siHei() {
-			alert("Hei " + navn3);
+			alert("Hei " + by4);
 		}
 	</script>
 
@@ -161,25 +155,25 @@ function siHei() {
 	<pre id="kode5">
 &lt;script&gt;
 function siHei() {
-    let navn = document.getElementById("navnInput").value;
+    let brukerNavn = document.getElementById("navnInput").value;
 
-    alert("Hallo " + navn + "! Jeg ønsker deg en fin dag!");
+    alert("Hallo " + brukerNavn + "! Jeg ønsker deg en fin dag!");
 }
 &lt;/script&gt;
 
-&lt;input type="text" id="navnInput"&gt;
+&lt;input type="text" id="navnInput" placeholder="Skriv inn navnet ditt."&gt;
 &lt;button onclick="siHei()"&gt;Send&lt;/button&gt;
 	</pre>
 	
 	<script>
 		function siHei_eks5() {
-		    let navn_eks5 = document.getElementById("navnInput_eks5").value;
+		    let brukerNavn_eks5 = document.getElementById("navnInput_eks5").value;
 
-		    alert("Hallo " + navn_eks5 + "! Jeg ønsker deg en fin dag!")
+		    alert("Hallo " + brukerNavn_eks5 + "! Jeg ønsker deg en fin dag!")
 		}
 	</script>
 	
-	<input type="text" id="navnInput_eks5">
+	<input type="text" id="navnInput_eks5" placeholder="Skriv inn navnet ditt.">
 	<button onclick="siHei_eks5()">Send</button>
 		
 	</div>
@@ -191,33 +185,33 @@ function siHei() {
 	<pre id="kode6">
 &lt;script&gt;
 function siHei() {
-    let navn = document.getElementById("navnInput").value;
+    let brukerNavn = document.getElementById("navnInput").value;
 
     if (navn === "") {
         alert("Du må skrive inn et navn.");
     } else {
-        alert("Hallo " + navn + "! Jeg ønsker deg en fin dag!");
+        alert("Hallo " + brukerNavn + "! Jeg ønsker deg en fin dag!");
     }
 }
 &lt;/script&gt;
 
-&lt;input type="text" id="navnInput"&gt;
+&lt;input type="text" id="navnInput" placeholder="Skriv inn navnet ditt."&gt;
 &lt;button onclick="siHei()"&gt;Send&lt;/button&gt;
 	</pre>
 	
 	<script>
 	function siHei_eks6() {
-	    let navn_eks6 = document.getElementById("navnInput_eks6").value;
+	    let brukerNavn_eks6 = document.getElementById("navnInput_eks6").value;
 		
-		if (navn_eks6 === "") {
+		if (brukerN	avn_eks6 === "") {
 	        alert("Du må skrive inn et navn.");
 	    } else {
-			alert("Hallo " + navn_eks6 + "! Jeg ønsker deg en fin dag!");
+			alert("Hallo " + brukerNavn_eks6 + "! Jeg ønsker deg en fin dag!");
 	    }
 	}
 	</script>
 
-	<input type="text" id="navnInput_eks6">
+	<input type="text" id="navnInput_eks6" placeholder="Skriv inn navnet ditt.">
 	<button onclick="siHei_eks6()">Send</button>
 			
 	</div>
