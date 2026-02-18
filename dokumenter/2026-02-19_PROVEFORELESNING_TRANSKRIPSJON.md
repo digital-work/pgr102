@@ -14,7 +14,10 @@ De siste årene har jeg forsket på universell utforming av IKT.]
 
 Prøveforelesningen i PGR102
 
-Målet for i dag:  
+[Takk for at jeg for mulighet til å holde denne prøveforelesningen.]
+
+## 3. Målet for i dag
+
 * Forstå hva programmering innebærer.  
 * Forstå hva variabler og funksjoner er.
 
@@ -23,7 +26,7 @@ Du finner eksemplene på: https://github.com/digital-work/pgr102
 [Vi bruker JavaScript som eksempel.  
 Vi skal gå fra en enkel melding til et lite program.]
 
-## 3. Hva er et program?
+## 4. Hva er et program?
 
 Et program er et sett med instruksjoner som forteller en datamaskin hvordan den løser en oppgave steg for steg.
 * Bearbeide tekst  
@@ -34,7 +37,7 @@ Et program er et sett med instruksjoner som forteller en datamaskin hvordan den 
 Det kan være oppgaver relatert til tekst, bilder, brukerinteraksjon eller beregninger.  
 I dag fokuserer vi på oppgaver som er relevante for webutvikling.]
 
-## 4. Hva er programmering?
+## 5. Hva er programmering?
 
 * Å skrive presise instruksjoner til en datamaskin  
 * Slik at den kan utføre oppgaver og løse problemer  
@@ -45,7 +48,7 @@ Ikke det vi mener.
 Derfor må vi være presise.  
 Men en datamaskin forstår ikke norsk eller engelsk.]
 
-## 5. Hvordan forstår datamaskinen instruksjonene?
+## 6. Hvordan forstår datamaskinen instruksjonene?
 
 Datamaskinen forstår bare maskinspråk  
 Vi skriver kode i et programmeringsspråk  
@@ -56,7 +59,7 @@ Det er vanskelig for mennesker å lese.
 Derfor bruker vi programmeringsspråk.  
 Programmeringsspråk oversettes til maskinspråk før programmet kjøres.]
 
-## 6. JavaScript
+## 7. JavaScript
 
 Et programmeringsspråk som kan brukes i en nettleser.  
 Det brukes ofte sammen med HTML og CSS.
@@ -68,7 +71,7 @@ I nettleseren brukes HTML for struktur.
 CSS for design.  
 JavaScript for logikk og interaksjon.]
 
-## 7. Eksempel 1
+## 8. Eksempel 1
 
 Statisk melding  
 
@@ -91,7 +94,7 @@ Hvis vi vil bruke et navn flere steder eller endre det,
 må vi gå gjennom koden for å endre overalt.  
 Det er upraktisk.]
 
-## 8. Eksempel 2
+## 9. Eksempel 2
 
 Bruk av variabel  
 
@@ -107,68 +110,39 @@ let navn = "Oslo";
 </button>
 ```
 
-[Vi kan lagre teksten i en variabel –  
-et navn på en verdi som kan brukes flere steder.  
+[Vi kan lagre teksten i en variabel – 
+et navn på en verdi som kan brukes flere steder. 
 
-Her skriver vi: let navn = "Oslo";  
-let oppretter variabelen,  
-navn er navnet,  
-= tildeler verdien,  
-og "Oslo" er selve verdien.  
+JavaScript-kode må ligge i en <script>-blokk.
 
-Når vi bruker variabelen i meldingen,  
-kan vi endre verdien ett sted,  
-og den oppdateres automatisk gjennom hele programmet.  
+Her skriver vi: let by = "Oslo"; 
+let oppretter variabelen, 
+by er navnet, 
+= tildeler verdien, 
+og "Oslo" er selve verdien. 
 
-JavaScript-kode må ligge i en <script>-blokk.]
+Verdien i en variabel kan også endres senere i programmet.
 
-## 9. Variabel
+Her brukte vi noe vi kaller en variabel.  
+Vi har sett hva den gjør i praksis.  
+La oss nå definere hva en variabel egentlig er.]
+
+## 10. Variabel
 
 Et navn på en lagret verdi  
-* Verdien kan brukes flere steder  
 * Verdien kan endres  
+* Verdien kan brukes flere steder  
 
-[Variabler gjør koden enklere å vedlikeholde.  
-Det er enklere å endre verdien.  
-Verdien kan gjenbrukes.  ]
+[Variabler gjør koden enklere å vedlikeholde.
+Hvis vi endrer verdien i variabelen,
+vil alle steder som bruker den,
+automatisk bruke den nye verdien.
 
-## 10. Eksempel 3
+Så langt har vi skrevet koden direkte i knappen.
+Det fungerer i små eksempler.
 
-Variabler kan endres og gjenbrukes
-
-[Eksempel 3](https://digital-work.github.io/pgr102/02_eksempler_grunnleggende-begreper.html?example=3)
-
-```
-<script>
-let navn = "Oslo";
-navn = "Bergen";
-</script>
-
-<button onclick="alert('Hei ' + navn)">
-   Klikk her
-</button>
-
-<button onclick="alert('Hei ' + navn)">
-   Klikk her igjen
-</button>
-```
-
-[Her endrer vi bare verdien i variabelen.  
-Koden i knappen er uendret, men resultatet blir annerledes.  
-
-Først setter vi navn til "Oslo",  
-så endrer vi det til "Bergen".  
-Når vi klikker, får vi "Hei Bergen"  
-fordi den siste verdien brukes.  
-
-Dette viser at en variabel kan endres underveis i programmet.
-Vi ser også at samme variabel kan brukes på to ulike knapper.]
-
-[Så langt har vi skrevet koden direkte i knappen.  
-Det fungerer i små eksempler,  
-men i større programmer med flere elementer  
-blir det fort rotete.  
-Da trenger vi en bedre struktur.]
+Men når programmet blir større,
+trenger vi en bedre struktur.]
 
 ## 11. Eksempel 4
 
@@ -200,7 +174,11 @@ men her er de tomme fordi vi ikke har noen input.
 
 I knappen skriver vi bare siHei().  
 Da kjøres funksjonen,  
-og gjør det samme som koden gjorde tidligere.]
+og gjør det samme som koden gjorde tidligere.
+
+Det vi har gjort her,  
+er å samle instruksjoner i en funksjon.  
+La oss definere hva en funksjon egentlig er.]
 
 ## 12. Funksjon
 
@@ -270,23 +248,26 @@ function siHei() {
 <button onclick="siHei()">Send</button>
 ```
 
-[Nå introduserer vi en betingelse.  
+[Nå introduserer vi en betingelse ved å bruke instruksjonen if.
 
-En if-setning betyr:  
-Hvis betingelsen i parentesene er sann,  
-kjører vi koden i blokken under.  
+En if-setning betyr:
+Hvis betingelsen i parentesene  er sann,
+kjører vi koden i blokken under.
 
-Her sjekker vi om variabelen navn er tom.  
-=== betyr at vi tester om to verdier er like.  
-"" representerer en tom tekst.  
+I dette eksempelet sjekker betingelsen om variabelen brukerNavn er tom.
+=== betyr at vi sammenligner to verdier.
+"" representerer en tom tekst.
 
-Er betingelsen sann,  
-kjøres koden i if-blokken, altså feilmeldingen.  
-Er den ikke sann,  
-kjøres koden i else-blokken, altså hilsenen.
+Er verdien i brukerNavn tom,
+kjøres koden i if-blokken – altså feilmeldingen.
+Er verdien brukerNavn ikke tom,
+kjøres koden i else-blokken – altså hilsenen.
 
-Dette gjør at programmet kan ta et valg  
-basert på situasjonen.]
+Programmet kan dermed gjøre én ting i én situasjon,
+og noe annet i en annen situasjon.
+
+Det er dette vi kaller en betingelse.
+La oss nå se på den formelle definisjonen.]
 
 ## 15. Betingelse (if)
 
@@ -331,7 +312,7 @@ Vi skal lage større programmer, håndtere mer kompleks input,
 og lære å skrive kode som andre kan lese, forstå og videreutvikle.  
 
 I arbeidslivet jobber man sjelden alene.  
-Koden skal fungere – men den skal også være forståelig for andre i teamet.]]
+Koden skal fungere – men den skal også være forståelig for andre i teamet.]
 
 ## 18. Takk for oppmerksomheten!
 
